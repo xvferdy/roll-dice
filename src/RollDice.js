@@ -7,6 +7,7 @@ class RollDice extends Component {
     super(props);
     this.state = {
       dieNum: "one",
+      dieNum2: "one",
     };
   }
   static defaultProps = {
@@ -18,18 +19,18 @@ class RollDice extends Component {
     this.setState({ dieNum: this.props.numArr[rand1 - 1] });
 
     let rand2 = Math.floor(Math.random() * this.props.numArr.length) + 1;
-    this.setState({ dieNum: this.props.numArr[rand2 - 1] });
+    this.setState({ dieNum2: this.props.numArr[rand2 - 1] });
 
-    console.log(rand1);
-    console.log(rand2);
+    // console.log(rand1);
+    // console.log(rand2);
   };
 
   render() {
     return (
       <div className="RollDice">
         <div className="RollDice-dice">
-          <Die dieNum={this.state.dieNum} />
-          <Die dieNum={this.state.dieNum} />
+          <Die face={this.state.dieNum} />
+          <Die face={this.state.dieNum2} />
         </div>
 
         <button onClick={this.randNum}>Roll!</button>
