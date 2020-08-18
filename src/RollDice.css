@@ -17,11 +17,15 @@
   border: 0px;
   border-radius: 10px;
   color: azure;
-  background-color: black;
+  background-color: grey;
   margin-top: 3em;
 }
 
+.RollDice-button-disabled {
+  opacity: 0.5;
+}
+
 .RollDice button:hover {
-  background-color: darkolivegreen;
+  background-color: rgb(72, 121, 105);
   cursor: pointer;
 }
